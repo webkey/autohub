@@ -13,6 +13,7 @@ function footerBottom(){
 
 /*Drop Navigation*/
 function dropNavigation() {
+	var btnFilters = $('.btn-filters');
 	$('.header').on('click', '.btn-filters', function (e) {
 		var btn = $(this);
 		btn
@@ -46,7 +47,8 @@ function dropNavigation() {
 	//	}
 	//});
 	$('.filters').on('click', 'a', function (e) {
-		if ($(window).width() > 767) { return; }
+		//if ($(window).width() > 767) { return; }
+		if (btnFilters.is(':hidden')) { return; }
 
 		var item = $(this).closest('li');
 		var filterDrop = item.find('.filters-drop');

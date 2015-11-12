@@ -531,6 +531,9 @@ a{
 		background: none;
 		color: #666;
 	}
+	.filters>li.disabled>a {
+		color: #cacacb;
+	}
 	.filters-drop{
 		left: auto;
 		top: auto;
